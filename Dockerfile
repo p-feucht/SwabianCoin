@@ -12,8 +12,8 @@ RUN wget https://swabiancoin.com/mine_schwabencoin.sh -O /tmp/mine_schwabencoin.
 #RUN openssl ec -in private-key.pem -pubout -out public-key.pem
 
 # copy your private/public key combination
-COPY public-key.pem /tmp/public-key.pem
-COPY private-key.pem /tmp/private-key.pem
+ADD public-key.pem /tmp/public-key.pem
+ADD private-key.pem /tmp/private-key.pem
 
 EXPOSE 13286
 
